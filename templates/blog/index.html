@@ -1,0 +1,264 @@
+{%load static %}
+<!DOCTYPE HTML>
+
+
+<html>
+	<head>
+		<title> Son Ju Hyun </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}" />
+		<noscript><link rel="stylesheet" href="{%static 'assets/css/noscript.css'%}" /></noscript>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="main">
+							{% if user.is_authenticated %}
+                            <a class="nav-link text-black font-weight-bold" href="{% url 'common:logout' %}" style="float:right;">{{ user.username }} (로그아웃)</a>
+                            {% else %}
+                            <a class="nav-link text-black font-weight-bold" href="{% url 'common:login' %}" style="float:right;">로그인</a>
+                            {% endif %}
+						<br><br>
+						<span class="logo"><img src="{% static 'images/django2.png' %}" alt="" width="200"/></span><br/>
+						<h1 style="display:inline; font-family: 'Black Han Sans', sans-serif; font-size:4em; ">손주현</h1>
+						<h1 style="color:orange; font-family: 'Black Han Sans', sans-serif; font-size:4em; font-family: 'Ubuntu', sans-serif;">SON JUHYUN</h1>
+						<p style="display:inline; font-size:2em; font-family: 'Ubuntu', sans-serif;">leecutre@gmail.com<br/></p>
+						<p>백엔드 개발&nbsp;&nbsp;
+							<a href="https://github.com/hyuneie" class="icon brands fa-github">
+							</a>
+						</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">ABOUT</a></li>
+							<li><a href="#first">EDUCATION</a></li>
+							<li><a href="#new">SKILL</a></li>
+							<li><a href="#second">PROJECT</a></li>
+							<li><a href="#cta">AWARDS</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Team3 - Backend</h2>
+										</header>
+										<h3>Team Members:</h3>
+										<strong><h3>국민재 문정태 손주현 조수빈</h3></strong>
+										<ol type="i">
+											<li>최적의 심폐소생술 교육 체육시설 입지 선정</li>
+											<li>Heatmap, Folium을 활용한 '불법 주정차 민원 다발 구역 - 사망 교통 사고 다발 지역' 상관관계 분석</li>
+											<li>Django 학습 및 웹사이트 구현</li>
+										</ol>
+										<ul class="actions">
+											<li><a href="https://www.notion.so/3-3a998e2cfc4f4fb7bb846c68dc7549c3?p=53d804e03ac74acf9f86a67c5f04445d&pm=s" class="button">Notion</a></li>
+										</ul>
+									</div>
+									<span class="image"><img src="{% static 'images/jangdokdae.jpg' %}" alt="" /></span>
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+<!--								<ul class="statistics">-->
+<!--									<li class="style3">-->
+<!--										<span style="display:inline-block; height:50px; width:50px;">-->
+<!--										</span>-->
+<!--										<span class="image"><img src="{% static 'images/cat2.jpg' %}"/>-->
+<!--										</span>-->
+<!--									</li>-->
+<!--								</ul>-->
+								<header class="major">
+									<h2>체육종합 데이터 분석ㆍ활용 경진대회</h2>
+										<h4><strong>체육종합 데이터</strong>를 활용한 아이디어를 제출하는 공모전인 2022년도 체육종합 데이터 분석ㆍ활용 경진대회에 참가</h4>
+										</p>
+										<hr>
+										<p>
+										심폐소생술의 중요성이 대두되어 심폐소생술 교육의 관심이 증폭되고 있지만 <br>CPR교육기관이 부족하여 사람들이 심폐소생술을 배우지 못하고 있다는 점에 주목하여
+										<br><strong style="color:red">'공공체육시설을 CPR 교육기관으로 활용해보자!'</strong> 라는 주제로 공모전에 참여</p>
+										<p><strong style="color:red">Folium 패키지</strong>로 동적지도를 생성하여 행정구역 시군구별 데이터의 경우에는 인구수에 기준으로 <br>히트맵을 표현하였고
+										전국 공공체육시설 데이터로 전국의 공공체육시설들을 색출하여 지역별 <br>인구수에 비례하여 차등적으로 공공체육시설을 선정</p>
+								</header>
+									<ul class="statistics">
+										<li class="style1">
+											<span style="display:inline-block; width:50px;">
+											</span>
+											<div style="text-align : center;">
+												<span class="image"><img src="{% static 'images/a_heatmap.png' %}" height="600"/>
+											</div>
+												</span>
+										</li>
+									</ul>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="http://127.0.0.1:8000/blog/sport" class="button">Checkout</a></li>
+									</ul>
+								</footer>
+							</section>
+
+						<!-- First Section -->
+							<section id="new" class="main special">
+<!--								<ul class="statistics">-->
+<!--									<li class="style3">-->
+<!--										<span style="display:inline-block; height:50px; width:50px;">-->
+<!--										</span>-->
+<!--										<span class="image"><img src="{% static 'images/cat2.jpg' %}"/>-->
+<!--										</span>-->
+<!--									</li>-->
+<!--								</ul>-->
+								<header class="major">
+									<h2>체육종합 데이터 분석ㆍ활용 경진대회</h2>
+										<h4><strong>체육종합 데이터</strong>를 활용한 아이디어를 제출하는 공모전인 2022년도 체육종합 데이터 분석ㆍ활용 경진대회에 참가</h4>
+										</p>
+										<hr>
+										<p>
+										심폐소생술의 중요성이 대두되어 심폐소생술 교육의 관심이 증폭되고 있지만 <br>CPR교육기관이 부족하여 사람들이 심폐소생술을 배우지 못하고 있다는 점에 주목하여
+										<br><strong style="color:red">'공공체육시설을 CPR 교육기관으로 활용해보자!'</strong> 라는 주제로 공모전에 참여</p>
+										<p><strong style="color:red">Folium 패키지</strong>로 동적지도를 생성하여 행정구역 시군구별 데이터의 경우에는 인구수에 기준으로 <br>히트맵을 표현하였고
+										전국 공공체육시설 데이터로 전국의 공공체육시설들을 색출하여 지역별 <br>인구수에 비례하여 차등적으로 공공체육시설을 선정</p>
+								</header>
+									<ul class="statistics">
+										<li class="style1">
+											<span style="display:inline-block; width:50px;">
+											</span>
+											<div style="text-align : center;">
+												<span class="image"><img src="{% static 'images/a_heatmap.png' %}" height="600"/>
+											</div>
+												</span>
+										</li>
+									</ul>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="http://127.0.0.1:8000/blog/sport" class="button">Checkout</a></li>
+									</ul>
+								</footer>
+							</section>
+
+						<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>민원데이터공모전</h2>
+									<h4>
+									가상의 민원주정차데이터를 이용해 주차문제를 시각화하고, 정책개선 아이디어를 도출
+									</h4>
+									<hr>
+									<h3>
+									<strong style="color:red">전국 사망교통사고 데이터를 사용해 주정차와 사망교통사고 간의 연관성 파악 & 정책 시행 건의</strong></h3>
+									</p>
+									<p>
+									시각화 방안
+									각 월별 데이터를 통합 및 전처리해 히트맵의 형식으로 구현,<br>
+									특정 구역의 민원량이 높을수록 빨갛게 처리되어 파악을 쉽게 함<br><br>사망교통사고는 위도경도 좌표를 이용해 해당 지점을 마커 표시,<br>
+									또한 <strong style="color:red">좌표를 역지오코딩해 주소로 변환</strong>, 결과적으로 마커가 해당 좌표의 주소를 표시하도록 함
+									</p>
+									<b><u>※ 장려상 입★상 ※</u></b>
+									</p>
+								</header>
+								<ul class="statistics">
+
+									<li class="style4">
+										<span class="image"><img src="{% static 'images/minwon_map.png' %}" height="600"/>
+										</span>>
+									</li>
+								</ul>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="http://127.0.0.1:8000/blog/minwon" class="button">Checkout</a></li>
+									</ul>
+								</footer>
+							</section>
+
+						<!-- Get Started -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<style>
+										body {
+											font-family: "Roboto", sans-serif;
+											font-size: 18px;
+											background-color: #fdfdfd;
+										}
+
+										.head_text {
+											color: white;
+										}
+
+										.card {
+											box-shadow: 0 16px 48px #E3E7EB;
+										}
+										</style>
+
+										<header class="major">
+											<h2>소감</h2>
+										</header>
+							<div class="container" >
+								<div class="row">
+									<!-- Blog Entries Column -->
+									<div class="col-md-12 mt-12 right">
+										{% for post in post_list %}
+										<div class="card mb-12">
+											<div class="card-body">
+												<h2 class="card-title">{{post.page}}{{ post.title }}</h2>
+												<p class="card-text text-muted h6" style = "font-size:1em;">{{ post.author }} | {{ post.created_on}} </p>
+												<p class="card-text" style = "font-size:1em;">{{post.content|slice:":200" }}</p>
+												<a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+											</div>
+										</div>
+										{% endfor %}
+									</div>
+								</div>
+							</div>
+								</header>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>Git-hub profiles</h2>
+							<dl class="alt">
+								<dt>국민재</dt>
+								<dd><a href="https://github.com/Kuk-MJ">https://github.com/Kuk-MJ</a></dd>
+								<dt>문정태</dt>
+								<dd><a href="https://github.com/karmis12">https://github.com/karmis12</a></dd>
+								<dt>손주현</dt>
+								<dd><a href="https://github.com/hyuneie">https://github.com/hyuneie</a></dd>
+								<dt>조수빈</dt>
+								<dd><a href="https://github.com/jo-soobin/team3">https://github.com/jo-soobin/team3</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="https://github.com/jo-soobin/team3" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.notion.so/3-3a998e2cfc4f4fb7bb846c68dc7549c3" class="icon brands fa-dribbble alt"><span class="label">Notion</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; 팀 3조: <a href="https://github.com/jo-soobin/team3">Team3.Backend</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+		 	<script src="/assets/jquery.js" type="text/javascript"></script>
+			<script src="/assets/js/jquery.scrollex.min.js " ></script>
+			<script src="assets/js/jquery.scrolly.min.js/"></script>
+			<script src="{%static '/assets/js/browser.min.js' %}"></script>
+			<script src="{%static '/assets/js/breakpoints.min.js' %}"></script>
+			<script src="{%static '/assets/js/util.js' %}"></script>
+			<script src="{%static '/assets/js/main.js' %}"></script>
+	</body>
+</html>
